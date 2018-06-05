@@ -1,6 +1,0 @@
-// test
-digraph {
-	A [label=aaa]
-	B [label=bbb]
-	A -> B
-}
