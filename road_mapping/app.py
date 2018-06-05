@@ -5,7 +5,7 @@ OUTPUT_PATH = "output/"
 def main():
     gvModel = graphviz_gen.initModel()
     graphviz_gen.populateModel(gvModel)
-    graphviz_gen.generateDiagram(gvModel, OUTPUT_PATH)
+    graphviz_gen.generateDiagram(gvModel, OUTPUT_PATH, True)
     
 if __name__ == "__main__":
     main()
