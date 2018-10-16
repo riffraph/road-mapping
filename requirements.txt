@@ -1,0 +1,12 @@
+atomicwrites==1.2.1
+attrs==18.2.0
+et-xmlfile==1.0.1
+graphviz==0.9
+jdcal==1.4
+more-itertools==4.3.0
+openpyxl==2.5.8
+pluggy==0.8.0
+py==1.7.0
+pytest==3.8.2
+-e git+git@github.com:riffraph/road-mapping.git@fd1d6b08b9d85b030e55af3b993177043894bdd0#egg=road_mapping
+six==1.11.0
