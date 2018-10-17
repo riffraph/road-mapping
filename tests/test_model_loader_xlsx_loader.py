@@ -11,9 +11,16 @@ def test_invalid_file_path():
     # input file is a folder
     filePath = os.path.join(TEST_DATA_FOLDER_PATH, '')
     with pytest.raises(Exception):
-        xlsx_loader.loadModel(filePath)
+        _, _ = xlsx_loader.loadModel(filePath)
 
     # input file is a different extension
     filePath = os.path.join(TEST_DATA_FOLDER_PATH, TEST_DATA_EMPTY_FILE_CSV)
     with pytest.raises(Exception):
-        xlsx_loader.loadModel(filePath)
+        _, _ = xlsx_loader.loadModel(filePath)
+
+
+def test_unnormalized_hierarchy_defined_by_data_groups():
+    filePath = os.path.join(TEST_DATA_FOLDER_PATH, TEST_DATA_UNORMALIZED_HIERARCHY_DEFINED_BY_DATA_GROUPS)
+    capabilities, features = xlsx_loader.loadModel(filePath)
+
+    assert(len(capabilities) > 0)
