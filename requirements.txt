@@ -1,12 +1,15 @@
-atomicwrites==1.2.1
-attrs==18.2.0
-et-xmlfile==1.0.1
-graphviz==0.9
-jdcal==1.4
-more-itertools==4.3.0
-openpyxl==2.5.8
+astroid==1.6.4
+filelock==3.0.9
+graphviz==0.8.3
+isort==4.3.4
+lazy-object-proxy==1.3.1
+mccabe==0.6.1
+numpy==1.13.3
 pluggy==0.8.0
 py==1.7.0
-pytest==3.8.2
--e git+git@github.com:riffraph/road-mapping.git@6321d41e4d5788fa6f1b402bb10073f649352b8f#egg=road_mapping
+pylint==1.9.1
 six==1.11.0
+toml==0.10.0
+tox==3.5.2
+virtualenv==16.0.0
+wrapt==1.10.11

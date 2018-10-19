@@ -1,14 +1,13 @@
 import graphviz 
-import road_mapping.log as log
+import log
+import const
 
-
-CAPABILITY_NODE_SHAPE = 'rectangle'
-FEATURE_NODE_SHAPE = 'oval'
 
 class graphviz_gen:
 
-    def generateGraph(capabilities, features=[]):
-        logger = log.get_logger('graph_generator')
+    @staticmethod
+    def generateGraph(capabilities, features=[], logger=log.get_logger('generateGraph')):
+        logger.debug('generateGraph()')
 
         # here we can specify what kind of graph we want to generate 
         # need to check whether the graph type affects how the 
@@ -28,7 +27,7 @@ class graphviz_gen:
             else:
                 raise Exception('generateGraph: capability must have a name, summary or description field')
 
-            gvModel.node(nodeId, nodeName, shape=CAPABILITY_NODE_SHAPE)
+            gvModel.node(nodeId, nodeName, shape=const.CAPABILITY_NODE_SHAPE)
             logger.debug('added Capability node: nodeId={}, nodeName={}'.format(nodeId, nodeName))
 
         for f in features:
@@ -45,7 +44,7 @@ class graphviz_gen:
             else:
                 raise Exception('generateGraph: feature must have a name, summary or description field')
 
-            gvModel.node(nodeId, nodeName, shape=FEATURE_NODE_SHAPE)
+            gvModel.node(nodeId, nodeName, shape=const.FEATURE_NODE_SHAPE)
             logger.debug('added Feature node: nodeId={}, nodeName={}'.format(nodeId, nodeName))
 
             # check if the parent capability exists
@@ -57,11 +56,12 @@ class graphviz_gen:
 
         return gvModel
 
+    @staticmethod
+    def generateDiagram(gvModel, output_path, view_diagram=False, logger=log.get_logger('generateDiagram')):
+        logger.debug('generateDiagram()')
 
-    def generateDiagram(gvModel, output_path, view_diagram=False):
         if type(gvModel) is not graphviz.Digraph:
             raise Exception('expected a Graphviz Digraph object')
 
-        print("Generating diagram ...")
-        print(gvModel.source)
+        logger.info(gvModel.source)
         gvModel.render(output_path + 'tmp.gv', view=view_diagram)

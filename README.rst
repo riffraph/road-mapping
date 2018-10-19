@@ -2,10 +2,22 @@
 road mapping
 ############
 
+How to test
+----
+
+    tox -e py36
+
+This will:
+* package the code
+* install dependencies 
+* create a virtual environment
+* invoke the test runner
+
+
 How to run
 ----
 
-python3 road-mapping/app.py
+    python3 app.py -v [inputFilePath] [outputFolderPath]
 
 
 
@@ -13,6 +25,7 @@ Dependencies
 ----
 
 Runtime:
+
     Python3
 
 Packages:
@@ -32,24 +45,3 @@ Packages:
     - used for unit testing
 
     pip install pytest
-
- 
-
-Python Virtual Environment
-----
-
-* install Python virtual environment packages using
-
-    pip install virtualenv
-
-* created using
-
-    virtualenv -p [path/to/python3] venv
-
-* activate virtual environment
-
-    source venv/bin/activate
-
-* deactivate virtual environment
-
-    deactivate
