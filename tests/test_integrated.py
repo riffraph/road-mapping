@@ -10,4 +10,4 @@ TEST_DATA_UNNORMALIZED_HIERARCHY_DEFINED_BY_LINK_TO_PARENT = 'testdata_unnormali
 
 def test_integrated():
     filePath = os.path.join(TEST_DATA_FOLDER_PATH, TEST_DATA_UNNORMALIZED_SIMPLE)
-    app.generateVisualRoadMap(filePath, OUTPUT_PATH)
+    app.generateVisualRoadMap(filePath, OUTPUT_PATH, False)

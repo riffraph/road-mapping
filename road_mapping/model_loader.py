@@ -1,8 +1,6 @@
 import openpyxl 
 import os
-import model
-import log
-import const
+from . import model, log, const
 
 class worksheet_summary():
     def __init__(self):

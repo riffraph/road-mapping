@@ -2,7 +2,7 @@ import os
 import sys
 import argparse
 #from . import model, model_loader, graph_generator
-import model, model_loader, graph_generator, log
+from . import model, model_loader, graph_generator, log
 
 def main(inputFilePath, outputFolderPath, viewFlag):
     generateVisualRoadMap(inputFilePath, outputFolderPath, viewFlag)

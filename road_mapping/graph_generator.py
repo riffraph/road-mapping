@@ -1,6 +1,5 @@
 import graphviz 
-import log
-import const
+from . import log, const
 
 
 class graphviz_gen:

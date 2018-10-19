@@ -1,6 +1,6 @@
 #from road_mapping.model import Capability
-import road_mapping.model as model
 import pytest
+import road_mapping.model as model
 
 def test_create_capability():
     capability = model.Capability('C_1', name='first capability')
