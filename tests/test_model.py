@@ -15,7 +15,7 @@ def test_capability_immutable_id():
 def test_create_feature():
     feature = model.Feature('F_1', 'C_1', name='first feature', summary='this is a feature', description='this does something')
     assert(feature.id == 'F_1')
-    assert(feature.capabilityId == 'C_1')
+    assert(feature.parentId == 'C_1')
     assert(feature.name == 'first feature')
     assert(feature.summary == 'this is a feature')
     assert(feature.description == 'this does something')
@@ -25,4 +25,4 @@ def test_feature_immutable_ids():
     with pytest.raises(AttributeError):
         feature.id = 'F_2'
     with pytest.raises(AttributeError):
-        feature.capabilityId = 'C_2'
+        feature.parentId = 'C_2'

@@ -8,6 +8,5 @@ openpyxl==2.5.8
 pluggy==0.8.0
 py==1.7.0
 pytest==3.8.2
--e git+git@github.com:riffraph/road-mapping.git@92a5123e7b2215690bda6b608124a272386e0c88#egg=road_mapping
+-e git+git@github.com:riffraph/road-mapping.git@6321d41e4d5788fa6f1b402bb10073f649352b8f#egg=road_mapping
 six==1.11.0
-UNKNOWN==0.0.0
