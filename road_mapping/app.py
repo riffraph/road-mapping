@@ -4,10 +4,6 @@ import argparse
 #from . import model, model_loader, graph_generator
 from . import model, model_loader, graph_generator, log
 
-def main(inputFilePath, outputFolderPath, viewFlag):
-    generateVisualRoadMap(inputFilePath, outputFolderPath, viewFlag)
-
-
 def generateVisualRoadMap(inputFilePath, outputFolderPath, viewFlag):
     logger = log.get_logger('road_mapping')
 
@@ -26,4 +22,4 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     
-    main(args.inputFilePath, args.outputFolderPath, args.view)
+    generateVisualRoadMap(args.inputFilePath, args.outputFolderPath, args.view)

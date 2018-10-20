@@ -10,5 +10,5 @@ setup(
     url='https://github.com/riffraph/road-mapping',
     packages=find_packages(),
     platforms='any',
-    long_description=io.open('README.rst', encoding='utf-8').read()
+    long_description=io.open('README.md', encoding='utf-8').read()
 )
