@@ -9,6 +9,6 @@ setup(
     author='Raphael Chan',
     url='https://github.com/riffraph/road-mapping',
     packages=find_packages(),
-    platforms='any',
-    long_description=io.open('README.md', encoding='utf-8').read()
+    platforms='any'
+    #long_description=io.open('README.md', encoding='utf-8').read()
 )
